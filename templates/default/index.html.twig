@@ -1,0 +1,46 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}quins voetbalnieuws!{% endblock %}
+
+{% block body %}
+    <section class="jumbotron text-center">
+        <div class="container">
+            <h1>{{ Album_titel }}</h1>
+            <h3>blijf op de hoogte van de nieuwste voetbal nieuws op madurovoetbalnieuws.com<h3>
+        </div>
+        <style>
+            .jumbotron {
+                padding-top: 30px;
+                padding-bottom: 30px;
+                margin-bottom: 30px;
+                color: white;
+                background-image: url("https://krturfgrass.com/wp-content/uploads/2018/11/Frontier-Fescue.jpg");
+            }
+            h4{
+                color: white;
+            }
+        </style>
+    </section>
+    <div class="album py-5 bg-light">
+        <div class="container">
+            <div class="row">
+               {% for blog in blogs %}
+                <div class="col-md-4">
+                    <div class="card mb-4 shadow-sm">
+                        <img class="card-img-top"
+                        <img src="{{ vich_uploader_asset(blog) }}" alt="{{ blog.title }}" />
+                        <div class="card-body">
+                            <p class="card-text">{{ blog.body |raw }}</p>
+                            <div class="d-flex justify-content-between align-items-center">
+
+                                <small class="text-muted">25 hours</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+               {% endfor %}
+                    </div>
+                </div>
+            </div>
+{% endblock %}

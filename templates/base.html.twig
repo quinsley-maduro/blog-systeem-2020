@@ -1,12 +1,37 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        {% block stylesheets %}{% endblock %}
-    </head>
-    <body>
-        {% block body %}{% endblock %}
-        {% block javascripts %}{% endblock %}
-    </body>
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Welcome!{% endblock %}</title>
+    {% block stylesheets %}{% endblock %}
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-inverse">
+    <a class="navbar-brand" href="#">maduro voetbal nieuws</a>
+    <div class="container-fluid">
+        <ul class="nav navbar-nav">
+            <li><a href="https://127.0.0.1:8000/default/">Home</a></li>
+            <li ><a href="https://127.0.0.1:8000/login/">login</a></li>
+            <li><a href="https://127.0.0.1:8000/register/">registreren</a></li>
+            <li><a href="https://127.0.0.1:8000/blog/">blog</a></li>
+        </ul>
+    </div>
+
+</nav>
+
+<div class="container">
+<style>
+    .container-fluid{
+        background-color:#007E33;
+    }
+</style>
+    {% block body %}{% endblock %}
+    {% block javascripts %}{% endblock %} </div>
+</body>
 </html>
